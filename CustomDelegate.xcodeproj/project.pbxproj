@@ -13,6 +13,9 @@
 		EDA428D21B466D82006C4C11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA428D11B466D82006C4C11 /* Images.xcassets */; };
 		EDA428D51B466D82006C4C11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA428D31B466D82006C4C11 /* LaunchScreen.xib */; };
 		EDA428E11B466D82006C4C11 /* CustomDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA428E01B466D82006C4C11 /* CustomDelegateTests.swift */; };
+		EDA428EB1B466EF6006C4C11 /* SecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA428EA1B466EF6006C4C11 /* SecodeViewController.swift */; };
+		EDA428F11B4676A5006C4C11 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA428EE1B4676A5006C4C11 /* WYPopoverController.m */; };
+		EDA428F21B4676A5006C4C11 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA428F01B4676A5006C4C11 /* WYStoryboardPopoverSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 		EDA428DA1B466D82006C4C11 /* CustomDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA428DF1B466D82006C4C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDA428E01B466D82006C4C11 /* CustomDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDelegateTests.swift; sourceTree = "<group>"; };
+		EDA428EA1B466EF6006C4C11 /* SecodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecodeViewController.swift; sourceTree = "<group>"; };
+		EDA428EC1B4676A5006C4C11 /* CustomDelegate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomDelegate-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDA428ED1B4676A5006C4C11 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		EDA428EE1B4676A5006C4C11 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		EDA428EF1B4676A5006C4C11 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		EDA428F01B4676A5006C4C11 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 				EDA428CA1B466D82006C4C11 /* AppDelegate.swift */,
 				EDA428CC1B466D82006C4C11 /* ViewController.swift */,
 				EDA428CE1B466D82006C4C11 /* Main.storyboard */,
+				EDA428EA1B466EF6006C4C11 /* SecodeViewController.swift */,
 				EDA428D11B466D82006C4C11 /* Images.xcassets */,
 				EDA428D31B466D82006C4C11 /* LaunchScreen.xib */,
 				EDA428C81B466D82006C4C11 /* Supporting Files */,
@@ -90,7 +100,12 @@
 		EDA428C81B466D82006C4C11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EDA428ED1B4676A5006C4C11 /* WYPopoverController.h */,
+				EDA428EE1B4676A5006C4C11 /* WYPopoverController.m */,
+				EDA428EF1B4676A5006C4C11 /* WYStoryboardPopoverSegue.h */,
+				EDA428F01B4676A5006C4C11 /* WYStoryboardPopoverSegue.m */,
 				EDA428C91B466D82006C4C11 /* Info.plist */,
+				EDA428EC1B4676A5006C4C11 /* CustomDelegate-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -214,6 +229,9 @@
 			files = (
 				EDA428CD1B466D82006C4C11 /* ViewController.swift in Sources */,
 				EDA428CB1B466D82006C4C11 /* AppDelegate.swift in Sources */,
+				EDA428EB1B466EF6006C4C11 /* SecodeViewController.swift in Sources */,
+				EDA428F11B4676A5006C4C11 /* WYPopoverController.m in Sources */,
+				EDA428F21B4676A5006C4C11 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CustomDelegate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomDelegate/CustomDelegate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +371,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CustomDelegate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomDelegate/CustomDelegate-Bridging-Header.h";
 			};
 			name = Release;
 		};
